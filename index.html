@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#19382f">
+  <meta name="description" content="BOHO Negombo — café, resto and bar in Ettukala, Negombo. Explore the menu, find us on the map and send your food order through WhatsApp.">
+  <title>BOHO Negombo | Café • Resto • Bar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">CAFÉ • RESTO • BAR <span>·</span> OPEN DAILY 8:00 AM – 12:00 AM</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="BOHO home"><span class="brand-mark">B</span><span><b>BOHO</b><small>NEGOMBO · SRI LANKA</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#story">Our Story</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#find-us">Find Us</a>
+      <a class="nav-order" href="#menu">Order Food ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">A LITTLE BOHO, A LOT OF FLAVOUR</p>
+        <h1>Good food.<br><em>Good mood.</em><br>BOHO.</h1>
+        <p class="hero-copy">A relaxed café, restaurant and bar in the heart of Negombo — made for slow mornings, long lunches and evenings worth staying for.</p>
+        <div class="hero-actions"><a class="button button-light" href="#menu">Explore the menu <span>↓</span></a><a class="text-link" href="https://wa.me/94763785873" target="_blank" rel="noopener">Contact on WhatsApp ↗</a></div>
+        <div class="hero-note"><span class="dot"></span> Ettukala, next to Jetwing Blue</div>
+      </div>
+      <div class="hero-stamp"><span>FRESH</span><b>FOOD</b><span>GOOD TIMES</span></div>
+    </section>
+
+    <section class="intro section-wrap" id="story">
+      <div><p class="eyebrow dark">WELCOME TO BOHO</p><h2>Come as you are.<br><em>Stay for the flavour.</em></h2></div>
+      <div class="intro-copy"><p>From colourful brunch plates and café favourites to seafood, tacos and Sri Lankan dishes, BOHO brings a varied menu to a laid-back Negombo setting.</p><p>Drop in for a coffee, meet friends for a meal, or order your favourites by WhatsApp. We’ll help you get in touch with the team.</p><a class="under-link" href="#find-us">Plan your visit <span>↗</span></a></div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-wrap">
+        <div class="section-heading"><div><p class="eyebrow">MADE TO BE ENJOYED</p><h2>A menu for <em>every mood.</em></h2></div><p class="heading-note">Choose your favourites, add them to your order, and send the details straight to BOHO on WhatsApp.</p></div>
+        <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+          <button class="tab active" data-category="all">All</button><button class="tab" data-category="brunch">Brunch</button><button class="tab" data-category="starters">Starters & Tacos</button><button class="tab" data-category="mains">Main Courses</button><button class="tab" data-category="seafood">Seafood</button><button class="tab" data-category="bowls">Smoothie Bowls</button><button class="tab" data-category="drinks">Drinks</button><button class="tab" data-category="srilankan">Sri Lankan</button>
+        </div>
+        <div class="menu-layout">
+          <div class="menu-grid" id="menuGrid"></div>
+          <aside class="order-panel" id="orderPanel">
+            <div class="order-panel-head"><div><p class="eyebrow dark">YOUR SELECTION</p><h3>Your order <span id="cartCount">0</span></h3></div><button id="clearCart" class="clear-button" type="button">Clear</button></div>
+            <div id="cartItems" class="cart-items"><p class="empty-cart">Your basket is waiting for something delicious.</p></div>
+            <div class="cart-total"><span>Estimated total</span><strong id="cartTotal">Rs. 0</strong></div>
+            <p class="fine-print">Prices are indicative and should be confirmed by BOHO. Availability, taxes and delivery charges may vary.</p>
+            <form id="orderForm">
+              <label for="customerName">Your name</label><input id="customerName" name="customerName" placeholder="Enter your name" required>
+              <label for="customerPhone">Contact number</label><input id="customerPhone" name="customerPhone" placeholder="07X XXX XXXX" inputmode="tel" required>
+              <label for="orderType">Order type</label><select id="orderType" name="orderType"><option value="Pickup">Pickup / takeaway</option><option value="Dine-in enquiry">Dine-in enquiry</option><option value="Delivery enquiry">Delivery enquiry (confirm availability)</option></select>
+              <label for="orderNotes">Special requests</label><textarea id="orderNotes" name="orderNotes" rows="2" placeholder="Spice level, allergies or other notes"></textarea>
+              <button class="button button-green full-button" type="submit">Send order via WhatsApp <span>↗</span></button>
+              <p class="fine-print">This opens WhatsApp with your order pre-filled. The order is not confirmed until the restaurant replies.</p>
+            </form>
+          </aside>
+        </div>
+        <p class="menu-disclaimer">Menu and prices are collected from publicly available listings and may change. Please confirm the current menu and final price directly with BOHO before payment.</p>
+      </div>
+    </section>
+
+    <section class="feature-band">
+      <div class="feature-image" role="img" aria-label="Food and dining at BOHO"></div>
+      <div class="feature-copy"><p class="eyebrow">YOUR TABLE IS WAITING</p><h2>Little moments.<br><em>Big flavours.</em></h2><p>Brunch with your favourite people, fresh coffee, seafood and colourful plates — make your next Negombo stop a BOHO one.</p><a class="button button-light" href="#find-us">Come find us <span>↗</span></a></div>
+    </section>
+
+    <section class="gallery-section section-wrap" id="gallery">
+      <div class="section-heading"><div><p class="eyebrow dark">A TASTE OF BOHO</p><h2>Good things <em>look good.</em></h2></div><p class="heading-note">Photos supplied in your PDF, enhanced for high-resolution display.</p></div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <section class="reviews-section" id="reviews">
+      <div class="section-wrap reviews-layout">
+        <div><p class="eyebrow">GOOD WORDS, GOOD COMPANY</p><h2>Come for the food.<br><em>Stay for the feeling.</em></h2><p class="review-description">Public review listings show positive feedback about the food variety and atmosphere. Ratings can change over time, so check the latest reviews before visiting.</p><a class="button button-light" href="https://www.google.com/maps/search/?api=1&query=BOHO+Negombo+Poruthota+Road" target="_blank" rel="noopener">Read Google reviews ↗</a></div>
+        <div class="rating-card"><div class="rating-number">4.6<span>/5</span></div><div class="stars" aria-label="4.6 out of 5 stars">★★★★★</div><p>Google rating reported by public restaurant listings</p><a href="https://www.google.com/maps/search/?api=1&query=BOHO+Negombo+Poruthota+Road" target="_blank" rel="noopener">View current rating and customer reviews ↗</a><hr><p class="small-note">Rating and review count may change. This website does not publish invented customer testimonials.</p></div>
+      </div>
+    </section>
+
+    <section class="visit-section section-wrap" id="find-us">
+      <div class="visit-copy"><p class="eyebrow dark">COME SAY HELLO</p><h2>Find your way<br><em>to BOHO.</em></h2><p class="address"><strong>BOHO Negombo</strong><br>No. 77/B, Poruthota Road, Ettukala,<br>Negombo 11500, Sri Lanka<br><span>Next to Jetwing Blue</span></p><p><strong>Every day</strong> · 8:00 AM – 12:00 AM</p><p><strong>Call:</strong> <a href="tel:+94312277730">+94 31 227 7730</a><br><strong>WhatsApp:</strong> <a href="https://wa.me/94763785873" target="_blank" rel="noopener">+94 76 378 5873</a><br><strong>Email:</strong> <a href="mailto:bohonegombo@gmail.com">bohonegombo@gmail.com</a></p><div class="visit-actions"><a class="button button-green" href="https://www.google.com/maps/dir/?api=1&destination=BOHO%2C+77%2FB+Poruthota+Road%2C+Negombo" target="_blank" rel="noopener">Get directions ↗</a><a class="button button-outline" href="https://wa.me/94763785873" target="_blank" rel="noopener">Message us ↗</a></div></div>
+      <div class="map-wrap"><iframe title="Map showing BOHO Negombo near Jetwing Blue" src="https://maps.google.com/maps?q=BOHO%20Negombo%2C%2077%2FB%20Poruthota%20Road%2C%20Ettukala%2C%20Negombo&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="map-caption"><span class="map-pin">⌖</span><div><strong>BOHO Negombo</strong><small>Ettukala · Negombo · Sri Lanka</small></div><a href="https://maps.app.goo.gl/k2tDTxVpu5DytEZY7" target="_blank" rel="noopener">Open Maps ↗</a></div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">B</span><span><b>BOHO</b><small>NEGOMBO · SRI LANKA</small></span></a><p>Good food. Good mood. See you at BOHO.</p><div class="footer-links"><a href="https://www.facebook.com/bohonegombo" target="_blank" rel="noopener">Facebook ↗</a><a href="https://linktr.ee/bohonegombo" target="_blank" rel="noopener">Official links ↗</a><a href="#home">Back to top ↑</a></div><small class="copyright">Unofficial sample website concept. Business details and menu prices should be verified by the restaurant. © <span id="year"></span></small></footer>
+  <a class="floating-whatsapp" href="https://wa.me/94763785873" target="_blank" rel="noopener" aria-label="Contact BOHO on WhatsApp">◉ <span>WhatsApp</span></a>
+  <script src="script.js"></script>
+</body>
+</html>
